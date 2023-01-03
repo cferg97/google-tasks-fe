@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    float: left;
+    background-color: #c7d0dd;
+}
+
+
+.custom-nav {
+    background-color: #64748b;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.edit-icon:hover {
+    cursor: pointer;
+}
+
+/* .main-planners {
+    flex-wrap: nowrap !important;
+    overflow: auto;
+} */
