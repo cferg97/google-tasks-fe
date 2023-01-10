@@ -1,10 +1,11 @@
 export const GET_PLANNER_DATA = "GET_PLANNER_DATA";
 export const DELETE_PLANNER = "DELETE_PLANNER";
 
+const URL = "https://google-task-clone-be-production.up.railway.app";
 export const getDataAction = () => {
   return async (dispatch, getState) => {
     try {
-      let response = await fetch("http://localhost:3001/planners");
+      let response = await fetch(`${URL}/planners`);
       let fetchedData = await response.json();
       if (response.ok) {
         dispatch({
@@ -30,7 +31,7 @@ export const newTaskAction = (data) => {
   };
   return async (dispatch) => {
     try {
-      let response = await fetch("http://localhost:3001/tasks", options);
+      let response = await fetch(`${URL}/tasks`, options);
       if (response.ok) {
         dispatch(getDataAction());
       } else {
@@ -52,7 +53,7 @@ export const newPlannerAction = (data) => {
   };
   return async (dispatch) => {
     try {
-      let response = await fetch("http://localhost:3001/planners", options);
+      let response = await fetch(`${URL}/planners`, options);
       if (response.ok) {
         dispatch(getDataAction());
       } else {
@@ -74,10 +75,7 @@ export const changePlannerAction = (id, data) => {
   };
   return async (dispatch) => {
     try {
-      let response = await fetch(
-        `http://localhost:3001/planners/${id}`,
-        options
-      );
+      let response = await fetch(`${URL}/planners/${id}`, options);
       if (response.ok) {
         dispatch(getDataAction());
       } else {
@@ -99,7 +97,7 @@ export const editTaskAction = (id, data) => {
   };
   return async (dispatch) => {
     try {
-      let response = await fetch(`http://localhost:3001/tasks/${id}`, options);
+      let response = await fetch(`${URL}/tasks/${id}`, options);
       if (response.ok) {
         dispatch(getDataAction());
       } else {
@@ -117,10 +115,7 @@ export const deletePlannerAction = (id) => {
   };
   return async (dispatch) => {
     try {
-      let response = await fetch(
-        `http://localhost:3001/planners/${id}`,
-        options
-      );
+      let response = await fetch(`${URL}/planners/${id}`, options);
       if (response.ok) {
         dispatch(getDataAction());
       } else {
@@ -138,10 +133,7 @@ export const deleteTaskAction = (id) => {
   };
   return async (dispatch) => {
     try {
-      let response = await fetch(
-        `http://localhost:3001/tasks/${id}`,
-        options
-      );
+      let response = await fetch(`${URL}/tasks/${id}`, options);
       if (response.ok) {
         dispatch(getDataAction());
       } else {
