@@ -47,10 +47,5 @@
   },
   "devDependencies": {
     "dotenv": "^16.0.3"
-  },
-  "browser": {
-    "fs": false,
-    "path": false,
-    "os": false
   }
 }
