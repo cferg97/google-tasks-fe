@@ -47,8 +47,5 @@
   },
   "devDependencies": {
     "dotenv": "^16.0.3"
-  },
-  "engines": {
-    "node": "16.x"
   }
 }
